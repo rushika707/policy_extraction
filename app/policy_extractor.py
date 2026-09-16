@@ -1,7 +1,9 @@
 import json
 import os
 
-from groq import Groq
+
+
+from app.llm_client import LLMClient
 
 
 PROMPT_PATH = "prompts/policy_extraction.txt"
@@ -78,34 +80,16 @@ def _extract_json_content(response_text):
 
 
 # ============================================================
-# GROQ CLIENT
+# LLM CLIENT
 # ============================================================
 
 def _create_client():
-
-    api_key = os.getenv(
-        "GROQ_API_KEY"
-    )
-
-    if not api_key:
-
-        raise ValueError(
-            "GROQ_API_KEY is not configured."
-        )
-
-    return Groq(
-        api_key=api_key
-    )
-
-
+    return LLMClient()
 def _get_model():
 
     return os.getenv(
-        "GROQ_MODEL",
-        "openai/gpt-oss-20b"
+        "LLM_MODEL"
     )
-
-
 # ============================================================
 # DYNAMIC BATCHING
 # ============================================================
@@ -209,7 +193,7 @@ def extract_policy(
     client=None
 ):
     """
-    Extract a complete document using one Groq call.
+    Extract a complete document using one LLM call.
 
     This function is retained for compatibility.
 
@@ -232,47 +216,26 @@ def extract_policy(
 
     model = _get_model()
 
-    response = client.chat.completions.create(
-
-        model=model,
-
-        messages=[
-            {
-                "role": "system",
-                "content": instructions
-            },
-            {
-                "role": "user",
-                "content": (
-                    "Analyse the following complete "
-                    "document and return its dynamic "
-                    "JSON representation.\n\n"
-                    "Do not invent information.\n"
-                    "Preserve the document's structure "
-                    "and all meaningful information.\n\n"
-                    "DOCUMENT:\n"
-                    + document_text
-                )
-            }
-        ],
-
+    response_text = client.generate(
+        prompt=(
+            instructions
+            + "\n\n"
+            + "Analyse the following complete "
+            "document and return its dynamic "
+            "JSON representation.\n\n"
+            "Do not invent information.\n"
+            "Preserve the document's structure "
+            "and all meaningful information.\n\n"
+            "DOCUMENT:\n"
+            + document_text
+        ),
         temperature=0,
-
-        response_format={
-            "type": "json_object"
-        }
-    )
-
-    response_text = (
-        response
-        .choices[0]
-        .message
-        .content
+        max_tokens=8192
     )
 
     _save_raw_response(
         response_text,
-        "output/raw_groq_response.txt"
+        "output/raw_llm_response.txt"
     )
 
     return _extract_json_content(
@@ -290,7 +253,7 @@ def extract_policy_chunks(
 ):
     """
     Extract document chunks using dynamically sized
-    Groq batches.
+    LLM batches.
 
     The batching mechanism is independent of policy
     semantics.
@@ -324,7 +287,7 @@ def extract_policy_chunks(
 
     print(
         f"Created {len(batches)} "
-        f"dynamic Groq batches."
+        f"dynamic LLM batches."
     )
 
     fragments = []
@@ -340,7 +303,7 @@ def extract_policy_chunks(
 
         print()
         print(
-            f"Processing Groq batch "
+            f"Processing LLM batch "
             f"{batch_number}/{len(batches)}"
         )
 
@@ -457,55 +420,23 @@ DOCUMENT CHUNKS:
 {serialized_chunks}
 """
 
-        # ----------------------------------------------------
-        # Groq request
-        # ----------------------------------------------------
-
-        response = client.chat.completions.create(
-
-            model=model,
-
-            messages=[
-                {
-                    "role": "system",
-                    "content": instructions
-                },
-                {
-                    "role": "user",
-                    "content": user_prompt
-                }
-            
-            ],
-
+        response_text = client.generate(
+            prompt=(
+                instructions
+                + "\n\n"
+                + user_prompt
+            ),
             temperature=0,
-            max_completion_tokens=8192,
-            reasoning_effort="low",
-            include_reasoning=False
+            max_tokens=8192
         )
 
-        message = response.choices[0].message
+        if not response_text:
+            raise ValueError(
+                "Ollama returned an empty batch response."
+            )
 
         print()
-        print("GROQ MESSAGE:")
-        print(message)
-
-        print()
-        print("FINISH REASON:")
-        print(
-            response.choices[0].finish_reason
-        )
-
-        print()
-        print("USAGE:")
-        print(
-            response.usage
-        )
-
-        response_text = (
-            message.content
-        )
-        print()
-        print("RAW GROQ RESPONSE:")
+        print("OLLAMA RESPONSE:")
         print(response_text)
         print()
 
@@ -523,7 +454,7 @@ DOCUMENT CHUNKS:
         ):
 
             raise ValueError(
-                "Groq batch response must be "
+                "LLM batch response must be "
                 "a JSON object."
             )
 
@@ -537,7 +468,7 @@ DOCUMENT CHUNKS:
         ):
 
             raise ValueError(
-                "Groq batch response does not "
+                "LLM batch response does not "
                 "contain a valid 'fragments' array."
             )
 
@@ -571,14 +502,14 @@ DOCUMENT CHUNKS:
             if chunk_index not in expected_indices:
 
                 raise ValueError(
-                    "Groq returned an unknown "
+                    "LLM returned an unknown "
                     f"chunk_index: {chunk_index}"
                 )
 
             if chunk_index in returned_indices:
 
                 raise ValueError(
-                    "Groq returned duplicate "
+                    "LLM returned duplicate "
                     f"chunk_index: {chunk_index}"
                 )
 
@@ -598,7 +529,7 @@ DOCUMENT CHUNKS:
         if missing_indices:
 
             raise ValueError(
-                "Groq failed to return fragments "
+                "LLM failed to return fragments "
                 "for chunks: "
                 f"{sorted(missing_indices)}"
             )
@@ -671,56 +602,44 @@ def merge_policy_fragments(
     fragments
 ):
     """
-    Merge independently extracted JSON fragments.
+    Merge extracted policy fragments into the canonical
+    policy representation.
 
-    This function does NOT understand the policy.
-
-    It simply preserves every extracted fragment in
-    source order.
+    Only policy content is retained.
+    Source-processing metadata is not included.
     """
 
     if not fragments:
-
         raise ValueError(
             "No fragments were provided."
         )
 
     ordered_fragments = sorted(
         fragments,
-        key=lambda item: (
-            item.get(
-                "chunk_index",
-                0
-            )
+        key=lambda item: item.get(
+            "chunk_index",
+            0
         )
     )
 
+    policies = []
+
+    for fragment in ordered_fragments:
+
+        data = fragment.get("data")
+
+        if data is None:
+            continue
+
+        policies.append(data)
+
+    if not policies:
+        raise ValueError(
+            "No policy content was extracted."
+        )
+
     return {
-        "documentFragments": [
-            {
-                "chunkIndex": fragment.get(
-                    "chunk_index"
-                ),
-
-                "blockIndex": fragment.get(
-                    "block_index"
-                ),
-
-                "blockType": fragment.get(
-                    "block_type"
-                ),
-
-                "heading": fragment.get(
-                    "heading"
-                ),
-
-                "content": fragment.get(
-                    "data"
-                )
-            }
-
-            for fragment in ordered_fragments
-        ]
+        "policies": policies
     }
 
 

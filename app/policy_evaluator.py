@@ -1,20 +1,10 @@
 import json
-import os
-
-from groq import Groq
-
+from app.llm_client import LLMClient
 
 class PolicyEvaluator:
 
     def __init__(self, model=None, client=None):
-        self.model = model or os.getenv(
-            "GROQ_MODEL",
-            "openai/gpt-oss-20b"
-        )
-
-        self.client = client or Groq(
-            api_key=os.getenv("GROQ_API_KEY")
-        )
+        self.client = client or LLMClient()
 
     def evaluate(self, input_data, policy_context):
 
@@ -227,33 +217,15 @@ RETRIEVED POLICY CONTEXT
             "\n========================================================\n"
         )
 
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=[
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ],
+        content = self.client.generate(
+            prompt=prompt,
             temperature=0,
-            response_format={
-                "type": "json_object"
-            },
-            max_completion_tokens=4096,
-            reasoning_effort="low",
-            include_reasoning=False
-        )
-
-        content = (
-            response
-            .choices[0]
-            .message
-            .content
-        )
+            max_tokens=4096
+)
 
         if not content:
             raise ValueError(
-                "Groq returned an empty evaluation response."
+                "LLM returned an empty evaluation response."
             )
 
         try:
@@ -261,6 +233,6 @@ RETRIEVED POLICY CONTEXT
 
         except json.JSONDecodeError as exc:
             raise ValueError(
-                "Groq returned invalid JSON.\n"
+                "LLM returned invalid JSON.\n"
                 f"Response: {content}"
             ) from exc

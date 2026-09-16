@@ -284,7 +284,7 @@ def show_processing_plan(
 
 
 # ============================================================
-# GROQ CHUNK EXTRACTION
+# LLM CHUNK EXTRACTION
 # ============================================================
 
 def extract_policy_from_chunks(
@@ -294,7 +294,7 @@ def extract_policy_from_chunks(
 
     print()
     print("=" * 60)
-    print("GROQ CHUNKED POLICY EXTRACTION")
+    print("LLM CHUNKED POLICY EXTRACTION")
     print("=" * 60)
 
     chunks = chunk_policy_document(
@@ -323,7 +323,7 @@ def extract_policy_from_chunks(
     if not fragments:
 
         raise ValueError(
-            "Groq did not produce any policy fragments."
+            "LLM did not produce any policy fragments."
         )
 
     save_json(
@@ -693,13 +693,13 @@ def parse_arguments():
     parser.add_argument(
         "--extract",
         action="store_true",
-        help="Extract policy using Groq"
+        help="Extract policy using LLM"
     )
 
     parser.add_argument(
         "--mock-extract-chunks",
         action="store_true",
-        help="Run extraction pipeline without Groq"
+        help="Run extraction pipeline without LLM"
     )
 
     parser.add_argument(
@@ -813,7 +813,7 @@ def main():
         return
 
     # --------------------------------------------------------
-    # GROQ EXTRACTION
+    # LLM EXTRACTION
     # --------------------------------------------------------
 
     if args.extract or args.all:

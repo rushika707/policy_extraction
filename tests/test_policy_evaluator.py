@@ -3,56 +3,34 @@ import json
 from app.policy_evaluator import PolicyEvaluator
 
 
-class FakeResponse:
-
-    class Choice:
-
-        class Message:
-
-            content = json.dumps({
-                "overall_result": "PASS",
-                "summary": (
-                    "The input satisfies the supplied policy."
-                ),
-                "items": [
-                    {
-                        "input": {
-                            "name": "Example",
-                            "value": 42
-                        },
-                        "result": "PASS",
-                        "reasoning": "Test evaluation.",
-                        "evidence": [
-                            {
-                                "policy_section": (
-                                    "Example section"
-                                ),
-                                "policy_text": (
-                                    "Example requirement."
-                                )
-                            }
-                        ]
-                    }
-                ]
-            })
-
-        message = Message()
-
-    choices = [Choice()]
-
-
-class FakeCompletions:
-
-    def create(self, **kwargs):
-        return FakeResponse()
-
-
 class FakeClient:
 
-    class Chat:
-        completions = FakeCompletions()
-
-    chat = Chat()
+    def generate(
+        self,
+        prompt,
+        temperature=0,
+        max_tokens=8192
+    ):
+        return json.dumps({
+            "overall_result": "PASS",
+            "summary": "The input satisfies the supplied policy.",
+            "items": [
+                {
+                    "input": {
+                        "name": "Example",
+                        "value": 42
+                    },
+                    "result": "PASS",
+                    "reasoning": "Test evaluation.",
+                    "evidence": [
+                        {
+                            "policy_section": "Example section",
+                            "policy_text": "Example requirement."
+                        }
+                    ]
+                }
+            ]
+        })
 
 
 def test_policy_evaluator_is_generic():

@@ -46,105 +46,45 @@ def test_extract_json_code_fence():
 
 
 def test_merge_fragments_preserves_order():
-
     fragments = [
         {
             "chunk_index": 2,
-            "block_index": 2,
-            "block_type": "text",
-            "heading": ["Second"],
-            "data": {
-                "content": "Second chunk"
-            }
+            "data": {"content": "Second chunk"}
         },
         {
             "chunk_index": 0,
-            "block_index": 0,
-            "block_type": "text",
-            "heading": ["First"],
-            "data": {
-                "content": "First chunk"
-            }
+            "data": {"content": "First chunk"}
         },
         {
             "chunk_index": 1,
-            "block_index": 1,
-            "block_type": "table",
-            "heading": ["Table"],
-            "data": {
-                "rows": [
-                    ["A", "B"]
-                ]
-            }
+            "data": {"rows": [["A", "B"]]}
         }
     ]
 
-    result = merge_policy_fragments(
-        fragments
-    )
+    result = merge_policy_fragments(fragments)
 
-    output = result[
-        "documentFragments"
-    ]
+    output = result["policies"]
 
-    assert len(output) == 3
-
-    assert output[0][
-        "chunkIndex"
-    ] == 0
-
-    assert output[1][
-        "chunkIndex"
-    ] == 1
-
-    assert output[2][
-        "chunkIndex"
-    ] == 2
+    assert output[0]["content"] == "First chunk"
+    assert output[1]["rows"] == [["A", "B"]]
+    assert output[2]["content"] == "Second chunk"
 
 
 def test_merge_does_not_drop_different_structures():
-
     fragments = [
         {
             "chunk_index": 0,
-            "block_index": 0,
-            "block_type": "text",
-            "heading": ["A"],
-            "data": {
-                "alpha": "value"
-            }
+            "data": {"alpha": "value"}
         },
         {
             "chunk_index": 1,
-            "block_index": 1,
-            "block_type": "text",
-            "heading": ["B"],
-            "data": [
-                {
-                    "beta": "value"
-                }
-            ]
+            "data": [{"beta": "value"}]
         }
     ]
 
-    result = merge_policy_fragments(
-        fragments
-    )
+    result = merge_policy_fragments(fragments)
 
-    output = result[
-        "documentFragments"
-    ]
+    output = result["policies"]
 
-    assert output[0][
-        "content"
-    ] == {
-        "alpha": "value"
-    }
-
-    assert output[1][
-        "content"
-    ] == [
-        {
-            "beta": "value"
-        }
-    ]
+    assert output[0] == {"alpha": "value"}
+    assert output[1] == [{"beta": "value"}]
