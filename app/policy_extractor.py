@@ -1,8 +1,6 @@
 import json
 import os
 
-
-
 from app.llm_client import LLMClient
 
 
@@ -85,11 +83,15 @@ def _extract_json_content(response_text):
 
 def _create_client():
     return LLMClient()
+
+
 def _get_model():
 
     return os.getenv(
         "LLM_MODEL"
     )
+
+
 # ============================================================
 # DYNAMIC BATCHING
 # ============================================================
@@ -341,7 +343,6 @@ def extract_policy_chunks(
             })
 
         if not chunk_payload:
-
             continue
 
         # ----------------------------------------------------
@@ -368,7 +369,7 @@ Return ONLY a valid JSON object with this structure:
   "fragments": [
     {{
       "chunk_index": <original chunk index>,
-      "content": <dynamic JSON representation of that chunk>
+      "data": <structured JSON value dynamically derived from that chunk>
     }}
   ]
 }}
@@ -379,40 +380,53 @@ IMPORTANT:
 
 2. Preserve the original chunk_index exactly.
 
-3. The "content" must be dynamically derived from
-   the supplied document content.
+3. The "data" field must contain a structured JSON
+   representation dynamically derived from the supplied
+   document content.
 
-4. Do NOT use a predefined universal policy schema.
+4. The "data" field MUST contain valid JSON.
 
-5. Do NOT assume concepts such as:
-   - rule_type
-   - conditions
-   - actions
-   - decisions
-   - thresholds
-   - exceptions
-   - controls
+5. Do NOT put the original document text into a single
+   "content" string.
 
-   unless those concepts actually appear in the
-   supplied document.
+6. Convert tables into structured JSON arrays of objects,
+   preserving every row and column.
 
-6. Preserve tables, headings, identifiers, labels,
-   requirements, statements, classifications,
-   criteria, relationships, exceptions, outcomes,
-   responsibilities, dates, values and other
-   meaningful information when present.
+7. Convert lists into JSON arrays where appropriate.
 
-7. Preserve relationships explicitly represented
-   inside the source chunk.
+8. Preserve every meaningful policy element separately.
 
-8. Do not invent information.
+9. Do NOT use a predefined universal policy schema.
 
-9. Do not merge information from different chunks.
+10. Do NOT assume concepts such as:
+    - rule_type
+    - conditions
+    - actions
+    - decisions
+    - thresholds
+    - exceptions
+    - controls
 
-10. Do not omit meaningful information merely to make
+    unless those concepts actually appear in the
+    supplied document.
+
+11. Preserve tables, headings, identifiers, labels,
+    requirements, statements, classifications,
+    criteria, relationships, exceptions, outcomes,
+    responsibilities, dates, values and other
+    meaningful information when present.
+
+12. Preserve relationships explicitly represented
+    inside the source chunk.
+
+13. Do not invent information.
+
+14. Do not merge information from different chunks.
+
+15. Do not omit meaningful information merely to make
     the JSON smaller.
 
-11. The resulting JSON will be used as the source of
+16. The resulting JSON will be used as the source of
     truth for downstream policy processing.
 
 DOCUMENT CHUNKS:
@@ -431,6 +445,7 @@ DOCUMENT CHUNKS:
         )
 
         if not response_text:
+
             raise ValueError(
                 "Ollama returned an empty batch response."
             )
@@ -553,6 +568,18 @@ DOCUMENT CHUNKS:
                 chunk_index
             ]
 
+            # The LLM must return structured JSON
+            # under the "data" key.
+            data = fragment.get(
+                "data"
+            )
+
+            if data is None:
+                raise ValueError(
+                    f"Fragment for chunk {chunk_index} "
+                    "must contain a 'data' value."
+            )
+
             fragments.append({
                 "chunk_index": chunk_index,
 
@@ -568,9 +595,7 @@ DOCUMENT CHUNKS:
                     "heading"
                 ),
 
-                "data": fragment.get(
-                    "content"
-                )
+                "data": data
             })
 
         print(
@@ -610,6 +635,7 @@ def merge_policy_fragments(
     """
 
     if not fragments:
+
         raise ValueError(
             "No fragments were provided."
         )
@@ -626,14 +652,19 @@ def merge_policy_fragments(
 
     for fragment in ordered_fragments:
 
-        data = fragment.get("data")
+        data = fragment.get(
+            "data"
+        )
 
         if data is None:
             continue
 
-        policies.append(data)
+        policies.append(
+            data
+        )
 
     if not policies:
+
         raise ValueError(
             "No policy content was extracted."
         )
