@@ -1,0 +1,25 @@
+[
+  {
+    "record_id": "REC-001",
+    "customer_name": "John Smith",
+    "age": 32,
+    "department": "Engineering"
+  },
+  {
+    "record_id": "REC-002",
+    "medical_support": "Asthma treatment",
+    "age": 41,
+    "department": "Finance"
+  },
+  {
+    "record_id": "REC-003",
+    "national_id": "UK123456789",
+    "department": "Operations"
+  },
+  {
+    "record_id": "REC-004",
+    "age": 25,
+    "department": "Engineering",
+    "role": "Developer"
+  }
+]

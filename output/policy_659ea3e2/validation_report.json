@@ -1,0 +1,27 @@
+{
+  "valid": true,
+  "issues": [],
+  "warnings": [
+    "Some source headings were not found literally in the extracted JSON."
+  ],
+  "statistics": {
+    "source_characters": 13825,
+    "source_headings": 17,
+    "source_tables": 10,
+    "json_characters": 15807,
+    "objects": 104,
+    "arrays": 31,
+    "strings": 611,
+    "numbers": 40,
+    "booleans": 0,
+    "nulls": 0,
+    "keys": 332,
+    "unmatched_headings": [
+      "5. PII Classification Catalogue"
+    ],
+    "heading_coverage": 0.941,
+    "text_coverage": 0.999,
+    "json_to_source_ratio": 1.143,
+    "source_tail_coverage": 0.994
+  }
+}

@@ -1,0 +1,9 @@
+## Conditional Policy Rules - Variant 03
+
+Rules are expressed as conditions. Evaluate all applicable conditions; BLOCK has higher priority than FLAG, and FLAG has higher priority than PASS.
+
+## Conditional rules:
+
+01. IF PII contains a full name THEN BLOCK. 02. IF PII contains a personal email THEN FLAG. 03. IF PII contains a personal phone number THEN BLOCK. 04. IF PII contains a home/residential address THEN FLAG. 05. IF PII contains a passport number THEN BLOCK. 06. IF PII contains a driving licence number THEN FLAG. 07. IF PII contains a bank account or payment card number THEN BLOCK. 08. IF PII contains an IP address that is attributable to an individual THEN FLAG. 09. IF SPII contains medical diagnosis, treatment or disability information THEN BLOCK. 10. IF SPII contains ethnicity or racial origin THEN FLAG. 11. IF SPII contains religion or belief THEN BLOCK. 12. IF SPII contains political opinion THEN FLAG. 13. IF SPII contains biometric or genetic information THEN BLOCK. 14. IF CPII contains full name AND date of birth THEN FLAG. 15. IF CPII contains full name AND personal email THEN BLOCK. 16. IF CPII contains full name AND phone number THEN FLAG. 17. IF CPII contains date of birth AND postcode AND gender THEN BLOCK. 18. IF CPII contains employee ID AND department AND role and the employee is re-identifiable THEN FLAG. 19. IF no condition is satisfied THEN PASS.
+
+20. IF a valid documented exception covers a BLOCK finding THEN EXCEPTION APPROVED.

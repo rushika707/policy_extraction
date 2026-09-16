@@ -1,0 +1,652 @@
+{
+  "documentFragments": [
+    {
+      "chunkIndex": 0,
+      "blockIndex": 0,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy\n\nStudent version | Policy document for conversion into Policy-as-Code"
+      }
+    },
+    {
+      "chunkIndex": 1,
+      "blockIndex": 1,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy"
+        ],
+        "table": [
+          {
+            "Policy metadata": "Value",
+            "Policy ID": "AI-CA-DG-001",
+            "Policy name": "AI Customer Analytics Data Governance Policy",
+            "Version": "1.0",
+            "Classification": "Internal",
+            "Policy owner": "Customer Analytics & Data Governance",
+            "Applies to": "Customer analytics, segmentation, prediction, experimentation and AI/ML datasets",
+            "Review cycle": "Annual or upon material change to customer data, AI or data governance requirements"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 2,
+      "blockIndex": 2,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "1. Purpose"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "1. Purpose"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 1. Purpose\n\nThis policy defines mandatory requirements for identifying, classifying, restricting and governing customer data used in artificial intelligence, machine learning, analytics and experimentation activities."
+      }
+    },
+    {
+      "chunkIndex": 3,
+      "blockIndex": 3,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "2. Scope"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "2. Scope"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 2. Scope\n\nThis policy applies to customer datasets used for analytics or AI purposes, including raw extracts, curated datasets, feature tables, labelled data, test and validation data, event logs, customer feedback, model inputs and derived datasets."
+      }
+    },
+    {
+      "chunkIndex": 4,
+      "blockIndex": 4,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "3. Policy Objective"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "3. Policy Objective"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 3. Policy Objective\n\nCustomer data must be assessed before use. Restricted or high-risk customer information must be flagged. Data that violates an applicable rule must not be used for analytics or AI processing unless an approved exception is recorded."
+      }
+    },
+    {
+      "chunkIndex": 5,
+      "blockIndex": 5,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "4. Definitions"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "4. Definitions"
+        ],
+        "table": [
+          {
+            "Term": "Customer data",
+            "Policy definition": "Information relating to an identifiable or reasonably identifiable customer."
+          },
+          {
+            "Term": "Direct identifier",
+            "Policy definition": "A data item that can identify a customer on its own."
+          },
+          {
+            "Term": "Indirect identifier",
+            "Policy definition": "A data item that may identify a customer when combined with other attributes."
+          },
+          {
+            "Term": "Restricted data",
+            "Policy definition": "Customer information requiring additional controls because of its sensitivity or potential impact."
+          },
+          {
+            "Term": "Analytics dataset",
+            "Policy definition": "Any dataset used to analyse, segment, predict or improve customer-related outcomes."
+          },
+          {
+            "Term": "Flagged record",
+            "Policy definition": "A record where one or more policy rules identify restricted or potentially identifying customer information."
+          },
+          {
+            "Term": "Remediation",
+            "Policy definition": "Action taken to remove, mask, tokenise, generalise or otherwise reduce the data risk before use."
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 6,
+      "blockIndex": 6,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.1 Direct customer identifiers"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.1 Direct customer identifiers"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 5.1 Direct customer identifiers\n\nThe following fields are treated as customer-identifying information when present in analytics or AI datasets and must be flagged."
+      }
+    },
+    {
+      "chunkIndex": 7,
+      "blockIndex": 7,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.1 Direct customer identifiers"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.1 Direct customer identifiers"
+        ],
+        "table": [
+          {
+            "Rule ID": "CID-01",
+            "Data type": "Customer name",
+            "Examples": "first_name, last_name, full_name, customer_name",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CID-02",
+            "Data type": "Personal email",
+            "Examples": "email, personal_email, contact_email",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CID-03",
+            "Data type": "Phone number",
+            "Examples": "mobile, telephone, phone_number",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CID-04",
+            "Data type": "Home or delivery address",
+            "Examples": "address, home_address, delivery_address, postcode",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CID-05",
+            "Data type": "Government-issued identifier",
+            "Examples": "national_id, tax_id, licence_number",
+            "Required policy outcome": "Block until removed or approved"
+          },
+          {
+            "Rule ID": "CID-06",
+            "Data type": "Customer account number",
+            "Examples": "account_number, customer_account_id where externally linkable",
+            "Required policy outcome": "Block until removed or approved"
+          },
+          {
+            "Rule ID": "CID-07",
+            "Data type": "Payment information",
+            "Examples": "bank_account, card_number, payment_token where linkable",
+            "Required policy outcome": "Block until removed or approved"
+          },
+          {
+            "Rule ID": "CID-08",
+            "Data type": "Online or device",
+            "Examples": "IP_address, device_id, cookie_id, advertising_id",
+            "Required policy outcome": "Flag record"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 8,
+      "blockIndex": 8,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.1 Direct customer identifiers"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.1 Direct customer identifiers"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 5.1 Direct customer identifiers\n\nidentifier"
+      }
+    },
+    {
+      "chunkIndex": 9,
+      "blockIndex": 9,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.2 Restricted customer data"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.2 Restricted customer data"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 5.2 Restricted customer data\n\nThe following categories must be blocked unless a documented approval and appropriate control justification exists."
+      }
+    },
+    {
+      "chunkIndex": 10,
+      "blockIndex": 10,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.2 Restricted customer data"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.2 Restricted customer data"
+        ],
+        "table": [
+          {
+            "Rule ID": "RC-01",
+            "Restricted data type": "Financial difficulty or vulnerability",
+            "Examples": "arrears_status, vulnerability_flag, financial_hardship",
+            "Required policy outcome": "Block record"
+          },
+          {
+            "Rule ID": "RC-02",
+            "Restricted data type": "Health-related customer information",
+            "Examples": "medical_support, health_condition, disability_information",
+            "Required policy outcome": "Block record"
+          },
+          {
+            "Rule ID": "RC-03",
+            "Restricted data type": "Precise location history",
+            "Examples": "gps_trace, exact_location_history, precise_coordinates",
+            "Required policy outcome": "Block record"
+          },
+          {
+            "Rule ID": "RC-04",
+            "Restricted data type": "Authentication or security secrets",
+            "Examples": "password, security_answer, authentication_secret",
+            "Required policy outcome": "Block record"
+          },
+          {
+            "Rule ID": "RC-05",
+            "Restricted data type": "Fraud investigation information",
+            "Examples": "fraud_case_notes, investigation_details, suspicious_activity_notes",
+            "Required policy outcome": "Block record"
+          },
+          {
+            "Rule ID": "RC-06",
+            "Restricted data type": "Biometric information",
+            "Examples": "voiceprint, face_template, fingerprint_template",
+            "Required policy outcome": "Block record"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 11,
+      "blockIndex": 11,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.3 Indirect identifiers and combination rules"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.3 Indirect identifiers and combination rules"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 5.3 Indirect identifiers and combination rules\n\nSome fields may not identify a customer on their own but can create identification or customer-risk concerns when combined. The following combinations must be flagged."
+      }
+    },
+    {
+      "chunkIndex": 12,
+      "blockIndex": 12,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "5.3 Indirect identifiers and combination rules"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "5.3 Indirect identifiers and combination rules"
+        ],
+        "table": [
+          {
+            "Rule ID": "CCID-01",
+            "Combination rule": "Full name + date of birth",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-02",
+            "Combination rule": "Full name + home address or postcode",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-03",
+            "Combination rule": "Customer ID + account balance or transaction event",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-04",
+            "Combination rule": "Email address + device ID",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-05",
+            "Combination rule": "Date of birth + postcode + gender",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-06",
+            "Combination rule": "Customer ID + complaint or support case details",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-07",
+            "Combination rule": "Location history + timestamp + customer identifier",
+            "Required policy outcome": "Flag record"
+          },
+          {
+            "Rule ID": "CCID-08",
+            "Combination rule": "Free-text feedback containing customer identifiers or sensitive details",
+            "Required policy outcome": "Flag record"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 13,
+      "blockIndex": 13,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "6. Mandatory Policy Requirements"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "6. Mandatory Policy Requirements"
+        ],
+        "table": [
+          {
+            "Rule ID": "DG-01",
+            "Policy requirement": "Pre-use data scan",
+            "Policy statement": "Customer datasets must be scanned for identifying and restricted data before analytics or AI use."
+          },
+          {
+            "Rule ID": "DG-02",
+            "Policy requirement": "Record-level flagging",
+            "Policy statement": "Each record containing direct, restricted or combination-based customer data must be flagged."
+          },
+          {
+            "Rule ID": "DG-03",
+            "Policy requirement": "Identifier handling",
+            "Policy statement": "Direct identifiers must be removed, masked, tokenised or replaced before approval for general analytics use."
+          },
+          {
+            "Rule ID": "DG-04",
+            "Policy requirement": "Restricted data handling",
+            "Policy statement": "Restricted customer data must be blocked unless documented approval and control justification exists."
+          },
+          {
+            "Rule ID": "DG-05",
+            "Policy requirement": "Combination handling",
+            "Policy statement": "Records matching combination rules must be reviewed and remediated before use."
+          },
+          {
+            "Rule ID": "DG-06",
+            "Policy requirement": "Free-text scanning",
+            "Policy statement": "Comments, complaints, notes, descriptions and feedback must be scanned for identifying or restricted information."
+          },
+          {
+            "Rule ID": "DG-07",
+            "Policy requirement": "Purpose limitation",
+            "Policy statement": "Customer data must only be used for the approved analytics or AI purpose for which access was granted."
+          },
+          {
+            "Rule ID": "DG-08",
+            "Policy requirement": "Approved dataset output",
+            "Policy statement": "Only records with no unresolved policy findings may be included in the approved dataset."
+          },
+          {
+            "Rule ID": "DG-09",
+            "Policy requirement": "Exception handling",
+            "Policy statement": "Exceptions must be documented, risk-assessed, time-bound and approved by the designated data governance authority."
+          },
+          {
+            "Rule ID": "DG-10",
+            "Policy requirement": "Audit trail",
+            "Policy statement": "Scan results, triggered rules, decisions, remediation status and approvals must be retained for audit purposes."
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 14,
+      "blockIndex": 14,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "7. Dataset Decision Outcomes"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "7. Dataset Decision Outcomes"
+        ],
+        "table": [
+          {
+            "Decision": "PASS",
+            "Meaning": "No restricted or suspected customer data has been detected.",
+            "Required action": "Record may be included in the approved analytics dataset."
+          },
+          {
+            "Decision": "FLAG",
+            "Meaning": "Direct or combination-based customer-identifying data has been detected.",
+            "Required action": "Record must be remediated before general analytics or AI use."
+          },
+          {
+            "Decision": "BLOCK",
+            "Meaning": "Restricted data or a high-risk identifier has been detected.",
+            "Required action": "Record must be excluded unless an approved exception exists."
+          },
+          {
+            "Decision": "EXCEPTION APPROVED",
+            "Meaning": "Documented approval permits controlled use of the record.",
+            "Required action": "Use only under the approved conditions and retain audit evidence."
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 15,
+      "blockIndex": 15,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "8. Remediation Requirements"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "8. Remediation Requirements"
+        ],
+        "table": [
+          {
+            "Remediation method": "Removal",
+            "Policy expectation": "Delete the customer data field or remove the record where the information is not required."
+          },
+          {
+            "Remediation method": "Masking",
+            "Policy expectation": "Replace part of the value while preserving limited analytical utility, where appropriate."
+          },
+          {
+            "Remediation method": "Tokenisation",
+            "Policy expectation": "Replace a customer identifier with a non-identifying token."
+          },
+          {
+            "Remediation method": "Generalisation",
+            "Policy expectation": "Reduce precision, such as replacing exact location with region or age with an age band."
+          },
+          {
+            "Remediation method": "Aggregation",
+            "Policy expectation": "Combine records or values so individual customers cannot reasonably be inferred."
+          },
+          {
+            "Remediation method": "Anonymisation",
+            "Policy expectation": "Transform data so customers are no longer reasonably identifiable."
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 16,
+      "blockIndex": 16,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "9. Minimum Evidence Required"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "9. Minimum Evidence Required"
+        ],
+        "table": [
+          {
+            "Evidence item": "Dataset name",
+            "Requirement": "Name and version of the dataset assessed."
+          },
+          {
+            "Evidence item": "Scan date",
+            "Requirement": "Date when the dataset was scanned."
+          },
+          {
+            "Evidence item": "Triggered rule IDs",
+            "Requirement": "List of policy rules triggered by each flagged or blocked record."
+          },
+          {
+            "Evidence item": "Decision",
+            "Requirement": "PASS, FLAG, BLOCK or EXCEPTION APPROVED."
+          },
+          {
+            "Evidence item": "Remediation status",
+            "Requirement": "Not required, pending, completed or exception approved."
+          },
+          {
+            "Evidence item": "Purpose / use case",
+            "Requirement": "Approved analytics or AI purpose for which the dataset is being used."
+          },
+          {
+            "Evidence item": "Reviewer or approver",
+            "Requirement": "Named reviewer or approval reference where required."
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 17,
+      "blockIndex": 17,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "10. Non-compliance"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "10. Non-compliance"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 10. Non-compliance\n\nDatasets with unresolved customer-data findings must not be used for unapproved analytics, AI or experimentation. Non-compliance may result in suspension of dataset access, removal of system access, escalation to the data owner, remediation requirements or other action determined by the organisation."
+      }
+    },
+    {
+      "chunkIndex": 18,
+      "blockIndex": 18,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "11. Policy Review"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "11. Policy Review"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > 11. Policy Review\n\nThis policy must be reviewed at least annually or when there is a material change to customer data use, AI governance, analytics practices, security controls or regulatory requirements."
+      }
+    },
+    {
+      "chunkIndex": 19,
+      "blockIndex": 19,
+      "blockType": "table",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "Document control"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "Document control"
+        ],
+        "table": [
+          {
+            "Version": "1.0",
+            "Date": "07 September 2026",
+            "Summary of change": "Initial student version for customer analytics data governance policy-as-code exercise.",
+            "Owner": "Customer Analytics & Data Governance"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 20,
+      "blockIndex": 20,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "Policy-as-Code conversion notes"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "Policy-as-Code conversion notes"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > Policy-as-Code conversion notes\n\nThis policy is intentionally structured similarly to the reference policy so it can be used as a second input document for a generic policy extraction and Rego compilation pipeline. It contains direct field rules, restricted-data rules, combination rules, mandatory requirements, decision outcomes, remediation methods and evidence requirements."
+      }
+    },
+    {
+      "chunkIndex": 21,
+      "blockIndex": 21,
+      "blockType": "text",
+      "heading": [
+        "AI Customer Analytics Data Governance Policy",
+        "Policy-as-Code conversion notes"
+      ],
+      "content": {
+        "heading": [
+          "AI Customer Analytics Data Governance Policy",
+          "Policy-as-Code conversion notes"
+        ],
+        "text": "Section: AI Customer Analytics Data Governance Policy > Policy-as-Code conversion notes\n\nRule families use distinct identifiers (CID, RC, CCID and DG) so the resulting normalized policy can be compared against another department's policy without relying on the original rule IDs."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "valid": true,
+  "issues": [],
+  "warnings": [],
+  "statistics": {
+    "source_characters": 5247,
+    "source_headings": 7,
+    "source_tables": 4,
+    "json_characters": 9095,
+    "objects": 56,
+    "arrays": 37,
+    "strings": 383,
+    "numbers": 28,
+    "booleans": 0,
+    "nulls": 0,
+    "keys": 199,
+    "unmatched_headings": [],
+    "text_coverage": 0.997,
+    "json_to_source_ratio": 1.733,
+    "source_tail_coverage": 1.0
+  }
+}

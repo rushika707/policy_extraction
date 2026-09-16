@@ -1,0 +1,27 @@
+[
+  {
+    "record_id": "TEST-001",
+    "result": "BLOCK",
+    "reason": "The input record contains a full name, which triggers rule 01 of the policy: \"IF PII contains a full name THEN BLOCK.\" No other conditions apply, and there is no documented exception covering this BLOCK finding. Therefore the policy outcome is BLOCK."
+  },
+  {
+    "record_id": "TEST-002",
+    "result": "FLAG",
+    "reason": "The input record contains a personal email address, which satisfies conditional rule 02: \"IF PII contains a personal email THEN FLAG.\" No other rule that would trigger a higher‑priority outcome (BLOCK) applies, as the record lacks the additional data required for those rules. No documented exception is present to override the FLAG outcome. Therefore the policy outcome is FLAG."
+  },
+  {
+    "record_id": "TEST-003",
+    "result": "BLOCK",
+    "reason": "The input record contains a passport number, which is identified as PII. According to the policy’s conditional rule 05, the presence of a passport number triggers a BLOCK outcome. No documented exception is provided in the context to override this rule, so the BLOCK outcome applies."
+  },
+  {
+    "record_id": "TEST-004",
+    "result": "BLOCK",
+    "reason": "The input record contains a full name and a personal email address. According to the policy’s conditional rules, rule 01 states that if PII contains a full name, the outcome is BLOCK. Rule 02 states that if PII contains a personal email, the outcome is FLAG. Rule 15 further specifies that if CPII contains both a full name and a personal email, the outcome is BLOCK. Since the BLOCK outcome has higher priority than FLAG (as stated in the policy), the final outcome for this record is BLOCK. No documented exception is present to override this finding."
+  },
+  {
+    "record_id": "TEST-005",
+    "result": "PASS",
+    "reason": "The input record contains no data fields. None of the conditional rules in the policy reference any data that is present in the record. Therefore, no rule is satisfied. According to the policy, when no condition is satisfied the outcome is PASS."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "record_id": "REC-001",
+    "result": "Flag record",
+    "reason": "The input record contains the fields \"first_name\" and \"last_name\", which together constitute a full name. According to the AI Training Data PII Policy, a full name is a direct identifier that must be flagged. No other fields in the record trigger a different outcome, and the policy does not provide a higher‑priority outcome for this combination. Therefore the record must be flagged."
+  },
+  {
+    "record_id": "REC-002",
+    "result": "FLAG",
+    "reason": "The input record contains a field named \"email\" which matches the PII type \"Personal email address\" defined in rule PII-02. According to the policy, any record containing a direct identifier such as a personal email address must be flagged. The policy’s decision outcomes table defines the outcome for such a detection as FLAG, meaning the record must be remediated before training use."
+  },
+  {
+    "record_id": "REC-003",
+    "result": "FLAG",
+    "reason": "The record contains a full name (first_name and last_name) and a postcode. According to the policy, a full name is a direct identifier (Rule PII-01) and a postcode is a direct identifier (Rule PII-04). Both rules require the record to be flagged. Additionally, the combination rule CPII-02 (Full name + postal address or postcode) also requires a flag. No other rules apply that would override or change the outcome. Therefore the policy outcome for this record is FLAG."
+  },
+  {
+    "record_id": "REC-004",
+    "result": "BLOCK",
+    "reason": "The input record contains the field \"medical_condition\" with the value \"Asthma\", which is a health or medical information field. According to Rule SPII-01 in the policy, any record containing health or medical information must result in a \"Block record\" outcome. No other policy rule overrides or modifies this outcome for this record."
+  },
+  {
+    "record_id": "REC-005",
+    "result": "Block until removed or approved",
+    "reason": "The input record contains a passport_number field. According to the AI Training Data PII Policy, Rule PII-06 identifies passport_number as a direct identifier that requires the outcome \"Block until removed or approved\". No other applicable rules or exceptions are present in the retrieved context that would alter this outcome."
+  },
+  {
+    "record_id": "REC-006",
+    "result": "PASS",
+    "reason": "The record contains only non‑PII fields (age, department, role). No direct identifiers (e.g., name, email, phone) are present, and the only combination rule that could apply (CPII‑06: Employee ID + department + role) is not triggered because the record lacks an employee ID. Therefore, no personal data is detected, satisfying the mandatory requirement DP‑02 that records with personal data must be flagged. With no personal data detected, the policy’s decision outcome is PASS."
+  }
+]

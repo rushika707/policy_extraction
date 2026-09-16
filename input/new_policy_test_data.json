@@ -1,0 +1,26 @@
+[
+  {
+    "record_id": "ALT-001",
+    "username": "john_smith"
+  },
+  {
+    "record_id": "ALT-007",
+    "tax_id": "TX123456789"
+  },
+  {
+    "record_id": "ALT-016",
+    "full_name": "Alice Brown",
+    "employer": "Example Ltd",
+    "job_title": "Software Engineer"
+  },
+  {
+    "record_id": "ALT-023",
+    "location_history": ["London", "Manchester"],
+    "device_id": "DEV-12345"
+  },
+  {
+    "record_id": "ALT-024",
+    "department": "Engineering",
+    "project": "AI Platform"
+  }
+]

@@ -1,0 +1,447 @@
+{
+  "documentFragments": [
+    {
+      "chunkIndex": 0,
+      "blockIndex": 0,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy"
+      ],
+      
+      "content": {
+        "policy_id": "AI-SEC-AC-014",
+        "version": "3.1",
+        "effective_date": "15 September 2026"
+      }
+    },
+    {
+      "chunkIndex": 1,
+      "blockIndex": 1,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "1. Policy Metadata"
+      ],
+      "content": {
+        "owner": ""
+      }
+    },
+    {
+      "chunkIndex": 2,
+      "blockIndex": 2,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "1. Policy Metadata"
+      ],
+      "content": {
+        "owner": "AI Security and Governance"
+      }
+    },
+    {
+      "chunkIndex": 3,
+      "blockIndex": 3,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "1. Policy Metadata"
+      ],
+      "content": {
+        "applies_to": [
+          "Employees",
+          "contractors",
+          "service accounts",
+          "automated agents accessing AI development environments."
+        ]
+      }
+    },
+    {
+      "chunkIndex": 4,
+      "blockIndex": 4,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "1. Policy Metadata"
+      ],
+      "content": {
+        "review": "Annual and following a material security or regulatory change."
+      }
+    },
+    {
+      "chunkIndex": 5,
+      "blockIndex": 5,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "2. Purpose"
+      ],
+      "content": {
+        "purpose": "This policy establishes controls for granting, reviewing, monitoring and revoking access to environments used to develop, test, fine-tune and operate artificial intelligence models. Access decisions must consider identity, environment sensitivity, privilege level, authentication strength and approved business justification."
+      }
+    },
+    {
+      "chunkIndex": 6,
+      "blockIndex": 6,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "3. Scope"
+      ],
+      "content": {
+        "scope": "The policy covers development workstations, shared notebooks, model training clusters, evaluation environments, staging systems, production inference services, model registries and associated service accounts. It applies to interactive users and non-human identities."
+      }
+    },
+    {
+      "chunkIndex": 7,
+      "blockIndex": 7,
+      "blockType": "table",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "4. Access Classification Matrix"
+      ],
+      "content": {
+        "access_classification_matrix": [
+          {
+            "Environment": "Development",
+            "Minimum Authentication": "MFA",
+            "Maximum Privilege": "Developer",
+            "Approval": "Team lead"
+          },
+          {
+            "Environment": "Evaluation",
+            "Minimum Authentication": "MFA + managed device",
+            "Maximum Privilege": "Developer",
+            "Approval": "Model owner"
+          },
+          {
+            "Environment": "Staging",
+            "Minimum Authentication": "MFA + managed device",
+            "Maximum Privilege": "Operator",
+            "Approval": "Model owner + Security"
+          },
+          {
+            "Environment": "Production",
+            "Minimum Authentication": "Phishing-resistant MFA",
+            "Maximum Privilege": "Operator",
+            "Approval": "Service owner + Security"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 8,
+      "blockIndex": 8,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-01",
+          "title": "Unique identity",
+          "description": "Shared human accounts must not be used to access model development or production environments. Every human user must authenticate using an individually assigned identity."
+        }
+      }
+    },
+    {
+      "chunkIndex": 9,
+      "blockIndex": 9,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-02",
+          "title": "MFA",
+          "description": "Multi-factor authentication is mandatory for all interactive access. Production access requires phishing-resistant MFA."
+        }
+      }
+    },
+    {
+      "chunkIndex": 10,
+      "blockIndex": 10,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-03",
+          "title": "Least privilege",
+          "description": "Access must use the lowest privilege necessary for the approved task. Administrative privileges require separate approval."
+        }
+      }
+    },
+    {
+      "chunkIndex": 11,
+      "blockIndex": 11,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-04",
+          "title": "Time-bound elevation",
+          "description": "Privileged elevation must have an expiry time. Elevation lasting longer than 8 hours requires explicit security approval."
+        }
+      }
+    },
+    {
+      "chunkIndex": 12,
+      "blockIndex": 12,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-05",
+          "title": "Service accounts",
+          "description": "Non-human identities must have a named owner, documented purpose and credential rotation interval not exceeding 90 days."
+        }
+      }
+    },
+    {
+      "chunkIndex": 13,
+      "blockIndex": 13,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-06",
+          "title": "Access review",
+          "description": "Access to production and staging must be reviewed at least every 90 days. Development access must be reviewed at least every 180 days."
+        }
+      }
+    },
+    {
+      "chunkIndex": 14,
+      "blockIndex": 14,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-07",
+          "title": "Inactive access",
+          "description": "An account with no successful authentication for 60 consecutive days must be suspended unless an approved exception exists."
+        }
+      }
+    },
+    {
+      "chunkIndex": 15,
+      "blockIndex": 15,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-08",
+          "title": "Termination",
+          "description": "Access for a departing worker must be revoked no later than the end of the worker's final authorized working period."
+        }
+      }
+    },
+    {
+      "chunkIndex": 16,
+      "blockIndex": 16,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "5. Mandatory Controls"
+      ],
+      "content": {
+        "control": {
+          "id": "AC-09",
+          "title": "Logging",
+          "description": "Authentication, privilege elevation, access grants, access revocations and failed production access attempts must be retained for at least 12 months."
+        }
+      }
+    },
+    {
+      "chunkIndex": 17,
+      "blockIndex": 17,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "6. Elevated Access Conditions"
+      ],
+      "content": {
+        "elevated_access_conditions": "An elevation request is approved only when the requester has a valid business justification, the target environment is identified, the requested privilege is specified and an accountable approver is recorded. Emergency elevation may be granted by the on-call security authority for up to 4 hours. The emergency action must be reviewed by Security within 1 business day."
+      }
+    },
+    {
+      "chunkIndex": 18,
+      "blockIndex": 18,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "7. Exceptions"
+      ],
+      "content": {
+        "exceptions": "Exceptions must identify the affected identity or group, environment, control being bypassed, business justification, risk assessment, compensating control, approver and expiry date. An exception without an expiry date is invalid. Security may revoke an exception immediately when the associated risk materially changes."
+      }
+    },
+    {
+      "chunkIndex": 19,
+      "blockIndex": 19,
+      "blockType": "table",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "8. Decision Outcomes"
+      ],
+      "content": {
+        "decision_outcomes": [
+          {
+            "Outcome": "ALLOW",
+            "Condition": "All applicable controls are satisfied.",
+            "Action": "Grant or retain the requested access."
+          },
+          {
+            "Outcome": "DENY",
+            "Condition": "A mandatory control is not satisfied.",
+            "Action": "Do not grant access."
+          },
+          {
+            "Outcome": "SUSPEND",
+            "Condition": "Existing access violates an active control.",
+            "Action": "Suspend access until the issue is resolved."
+          },
+          {
+            "Outcome": "EXCEPTION",
+            "Condition": "An approved exception is active and within its expiry.",
+            "Action": "Permit access only within documented conditions."
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 20,
+      "blockIndex": 20,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "9. Monitoring and Enforcement"
+      ],
+      "content": {
+        "monitoring_and_enforcement": "Security monitoring must identify repeated failed production authentication, unauthorized privilege elevation, expired exceptions and access that remains active after required review. Where a mandatory control is violated, access may be suspended pending investigation. Repeated or material violations may result in escalation to the service owner, Security leadership or the relevant risk committee."
+      }
+    },
+    {
+      "chunkIndex": 21,
+      "blockIndex": 21,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "10. Required Audit Evidence"
+      ],
+      "content": {
+        "required_audit_evidence": [
+          "Identity or service-account identifier and owner",
+          "Environment and privilege requested",
+          "Business justification and approver",
+          "Authentication method",
+          "Grant, review, elevation, suspension and revocation timestamps",
+          "Exception reference and expiry where applicable",
+          "Relevant security event or investigation reference"
+        ]
+      }
+    },
+    {
+      "chunkIndex": 22,
+      "blockIndex": 22,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "11. Non-Compliance"
+      ],
+      "content": {
+        "non_compliance": "Failure to comply with this policy may result in access suspension, mandatory remediation, security investigation and escalation according to organisational procedures. No application team may permanently bypass a mandatory access control by changing application configuration without an approved policy exception."
+      }
+    },
+    {
+      "chunkIndex": 23,
+      "blockIndex": 23,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "12. Document Control"
+      ],
+      "content": {
+        "document_control": {
+          "version": ""
+        }
+      }
+    },
+    {
+      "chunkIndex": 24,
+      "blockIndex": 24,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "12. Document Control"
+      ],
+      "content": {
+        "document_control": {
+          "version": "3.1"
+        }
+      }
+    },
+    {
+      "chunkIndex": 25,
+      "blockIndex": 25,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "12. Document Control"
+      ],
+      "content": {
+        "document_control": {
+          "change_summary": "Added service-account rotation, inactivity suspension and emergency elevation controls."
+        }
+      }
+    },
+    {
+      "chunkIndex": 26,
+      "blockIndex": 26,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "12. Document Control"
+      ],
+      "content": {
+        "document_control": {
+          "next_review_label": "Next review:"
+        }
+      }
+    },
+    {
+      "chunkIndex": 27,
+      "blockIndex": 27,
+      "blockType": "text",
+      "heading": [
+        "AI Development Access and Model Environment Control Policy",
+        "12. Document Control"
+      ],
+      "content": {
+        "document_control": {
+          "next_review_date": "September 2027."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "chunk_index": 0,
+    "block_index": 0,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy"
+    ],
+    "text": "Section: Employee Expense Approval Policy\n\nPolicy ID:"
+  },
+  {
+    "chunk_index": 1,
+    "block_index": 1,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy"
+    ],
+    "text": "Section: Employee Expense Approval Policy\n\nFIN-EXP-2026-004"
+  },
+  {
+    "chunk_index": 2,
+    "block_index": 2,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy"
+    ],
+    "text": "Section: Employee Expense Approval Policy\n\nVersion:"
+  },
+  {
+    "chunk_index": 3,
+    "block_index": 3,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy"
+    ],
+    "text": "Section: Employee Expense Approval Policy\n\n1.0"
+  },
+  {
+    "chunk_index": 4,
+    "block_index": 4,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy"
+    ],
+    "text": "Section: Employee Expense Approval Policy\n\nEffective Date:"
+  },
+  {
+    "chunk_index": 5,
+    "block_index": 5,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy"
+    ],
+    "text": "Section: Employee Expense Approval Policy\n\n15 September 2026"
+  },
+  {
+    "chunk_index": 6,
+    "block_index": 6,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "1. Purpose"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 1. Purpose\n\nThis policy establishes requirements for reviewing and approving employee expenses. Expenses must be supported by a valid business purpose and the required approval before reimbursement."
+  },
+  {
+    "chunk_index": 7,
+    "block_index": 7,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "2. Scope"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 2. Scope\n\nThis policy applies to employees, contractors and temporary staff submitting business-related expenses."
+  },
+  {
+    "chunk_index": 8,
+    "block_index": 8,
+    "block_type": "table",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "3. Expense Approval Matrix"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 3. Expense Approval Matrix\n\n| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |"
+  },
+  {
+    "chunk_index": 9,
+    "block_index": 9,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "4. Mandatory Requirements"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose."
+  },
+  {
+    "chunk_index": 10,
+    "block_index": 10,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "4. Mandatory Requirements"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-02 - An expense must have the approval required by the Expense Approval Matrix before reimbursement."
+  },
+  {
+    "chunk_index": 11,
+    "block_index": 11,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "4. Mandatory Requirements"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-03 - An expense with a non-positive amount is invalid and must be rejected."
+  },
+  {
+    "chunk_index": 12,
+    "block_index": 12,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "4. Mandatory Requirements"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-04 - Expenses in categories not defined by this policy require Finance review before reimbursement."
+  },
+  {
+    "chunk_index": 13,
+    "block_index": 13,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "4. Mandatory Requirements"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-05 - An expense must not be reimbursed when the required approval is missing."
+  },
+  {
+    "chunk_index": 14,
+    "block_index": 14,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "5. Exceptions"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 5. Exceptions\n\nAn exception may be granted only when it is documented, includes a business justification, identifies an accountable approver and has an expiry date. An exception without an expiry date is invalid."
+  },
+  {
+    "chunk_index": 15,
+    "block_index": 15,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "6. Decision Outcomes"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\nThe policy does not provide enough information for an automatic decision or the category is undefined."
+  },
+  {
+    "chunk_index": 16,
+    "block_index": 16,
+    "block_type": "table",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "6. Decision Outcomes"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\n| Decision   | Meaning                                                                         |\n|------------|---------------------------------------------------------------------------------|\n| APPROVE    | All applicable requirements are satisfied and the required approval is present. |\n| REJECT     | A mandatory requirement is violated or required approval is missing.            |\n| REVIEW     | The policy does not provide enough information for an automatic decision or     |\n| EXCEPTION  | A valid documented exception is active and applicable.                          |"
+  },
+  {
+    "chunk_index": 17,
+    "block_index": 17,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "7. Audit Evidence"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 7. Audit Evidence\n\nThe employee identifier, category, amount, business purpose, approval, decision and exception reference where applicable must be retained for audit purposes."
+  },
+  {
+    "chunk_index": 18,
+    "block_index": 18,
+    "block_type": "text",
+    "heading": [
+      "Employee Expense Approval Policy",
+      "8. Policy Review"
+    ],
+    "text": "Section: Employee Expense Approval Policy > 8. Policy Review\n\nThis policy must be reviewed annually or when material changes occur to expense approval requirements."
+  }
+]

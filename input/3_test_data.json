@@ -1,0 +1,31 @@
+[
+  {
+    "record_id": "TEST-001",
+    "data": {
+      "full_name": "John Smith"
+    }
+  },
+  {
+    "record_id": "TEST-002",
+    "data": {
+      "personal_email": "john@example.com"
+    }
+  },
+  {
+    "record_id": "TEST-003",
+    "data": {
+      "passport_number": "P1234567"
+    }
+  },
+  {
+    "record_id": "TEST-004",
+    "data": {
+      "full_name": "John Smith",
+      "personal_email": "john@example.com"
+    }
+  },
+  {
+    "record_id": "TEST-005",
+    "data": {}
+  }
+]

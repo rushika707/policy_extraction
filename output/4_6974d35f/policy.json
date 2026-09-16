@@ -1,0 +1,398 @@
+{
+  "documentFragments": [
+    {
+      "chunkIndex": 0,
+      "blockIndex": 0,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy\n\nPolicy ID: AI-DP-PII-002 Version: 1.0 Classification: Internal"
+      }
+    },
+    {
+      "chunkIndex": 1,
+      "blockIndex": 1,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy\n\nPurpose: Test document containing a different set of PII, SPII and CPII rules for the Policy-as-Code extraction pipeline."
+      }
+    },
+    {
+      "chunkIndex": 2,
+      "blockIndex": 2,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "1. Decision Definitions"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "1. Decision Definitions"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 1. Decision Definitions\n\nPASS:"
+      }
+    },
+    {
+      "chunkIndex": 3,
+      "blockIndex": 3,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "1. Decision Definitions"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "1. Decision Definitions"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 1. Decision Definitions\n\nNo PII, SPII or CPII is detected."
+      }
+    },
+    {
+      "chunkIndex": 4,
+      "blockIndex": 4,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "1. Decision Definitions"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "1. Decision Definitions"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 1. Decision Definitions\n\nFLAG: Personal data is detected and the record requires remediation before permitted use."
+      }
+    },
+    {
+      "chunkIndex": 5,
+      "blockIndex": 5,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "1. Decision Definitions"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "1. Decision Definitions"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 1. Decision Definitions\n\nBLOCK: Sensitive or high-risk personal data is detected and the record must be excluded unless an approved exception exists."
+      }
+    },
+    {
+      "chunkIndex": 6,
+      "blockIndex": 6,
+      "blockType": "table",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "2. PII Rules"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "2. PII Rules"
+        ],
+        "table": {
+          "columns": [
+            "Rule ID",
+            "Data Type",
+            "Trigger / Fields",
+            "Outcome"
+          ],
+          "rows": [
+            {
+              "Rule ID": "PII-101",
+              "Data Type": "Username / account handle",
+              "Trigger / Fields": "username, account_handle, screen_name",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "PII-102",
+              "Data Type": "Date of birth",
+              "Trigger / Fields": "date_of_birth, dob, birth_date",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "PII-103",
+              "Data Type": "Personal URL",
+              "Trigger / Fields": "personal_website, profile_url linked to an individual",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "PII-104",
+              "Data Type": "Vehicle registration number",
+              "Trigger / Fields": "vehicle_registration, registration_plate",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "PII-105",
+              "Data Type": "Geolocation information",
+              "Trigger / Fields": "precise_location, GPS coordinates linked to an individual",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "PII-106",
+              "Data Type": "Emergency contact details",
+              "Trigger / Fields": "emergency_contact_name, emergency_contact_phone",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "PII-107",
+              "Data Type": "Tax identification number",
+              "Trigger / Fields": "tax_id, taxpayer_number",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "PII-108",
+              "Data Type": "Travel document reference",
+              "Trigger / Fields": "passport_reference, travel_document_id",
+              "Outcome": "BLOCK"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chunkIndex": 7,
+      "blockIndex": 7,
+      "blockType": "table",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "3. SPII Rules"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "3. SPII Rules"
+        ],
+        "table": {
+          "columns": [
+            "Rule ID",
+            "Data Type",
+            "Trigger / Fields",
+            "Outcome"
+          ],
+          "rows": [
+            {
+              "Rule ID": "SPII-101",
+              "Data Type": "Mental health information",
+              "Trigger / Fields": "mental_health_status, psychiatric_history, therapy_record",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "SPII-102",
+              "Data Type": "Sexual orientation",
+              "Trigger / Fields": "sexual_orientation, orientation",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "SPII-103",
+              "Data Type": "Criminal record information",
+              "Trigger / Fields": "criminal_record, conviction, alleged_offence",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "SPII-104",
+              "Data Type": "Financial hardship information",
+              "Trigger / Fields": "debt_status, insolvency, financial_hardship",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "SPII-105",
+              "Data Type": "Immigration status",
+              "Trigger / Fields": "visa_status, immigration_status, asylum_status",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "SPII-106",
+              "Data Type": "Religious practice details",
+              "Trigger / Fields": "worship_attendance, religious_practice, faith_activity",
+              "Outcome": "BLOCK"
+            },
+            {
+              "Rule ID": "SPII-107",
+              "Data Type": "Disability accommodation information",
+              "Trigger / Fields": "reasonable_adjustment, accommodation_need",
+              "Outcome": "BLOCK"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chunkIndex": 8,
+      "blockIndex": 8,
+      "blockType": "table",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "4. CPII Rules"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "4. CPII Rules"
+        ],
+        "table": {
+          "columns": [
+            "Rule ID",
+            "Combination",
+            "Trigger",
+            "Outcome"
+          ],
+          "rows": [
+            {
+              "Rule ID": "CPII-101",
+              "Combination": "Name + employer + job title",
+              "Trigger": "full_name + employer + job_title",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "CPII-102",
+              "Combination": "Date of birth + city + gender",
+              "Trigger": "dob + city + gender",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "CPII-103",
+              "Combination": "Username + email domain + organisation",
+              "Trigger": "username + email_domain + organisation",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "CPII-104",
+              "Combination": "Vehicle registration + postcode",
+              "Trigger": "registration_plate + postcode",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "CPII-105",
+              "Combination": "Employee number + manager + work location",
+              "Trigger": "employee_number + manager_name + work_location",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "CPII-106",
+              "Combination": "Customer reference + transaction timestamp + merchant",
+              "Trigger": "customer_reference + transaction_time + merchant_name",
+              "Outcome": "FLAG"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chunkIndex": 9,
+      "blockIndex": 9,
+      "blockType": "table",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "4. CPII Rules"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "4. CPII Rules"
+        ],
+        "table": {
+          "columns": [
+            "Rule ID",
+            "Combination",
+            "Trigger",
+            "Outcome"
+          ],
+          "rows": [
+            {
+              "Rule ID": "CPII-107",
+              "Combination": "Free text containing multiple indirect identifiers",
+              "Trigger": "free_text containing two or more linkable personal attributes",
+              "Outcome": "FLAG"
+            },
+            {
+              "Rule ID": "CPII-108",
+              "Combination": "Location history + device identifier",
+              "Trigger": "location_history + device_id",
+              "Outcome": "FLAG"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "chunkIndex": 10,
+      "blockIndex": 10,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "5. Remediation Requirements"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "5. Remediation Requirements"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 5. Remediation Requirements\n\nFor FLAG records, permitted remediation methods include removal, masking, tokenisation, generalisation, pseudonymisation, or anonymisation, as appropriate to the data."
+      }
+    },
+    {
+      "chunkIndex": 11,
+      "blockIndex": 11,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "5. Remediation Requirements"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "5. Remediation Requirements"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 5. Remediation Requirements\n\nFor BLOCK records, the personal data must be removed or transformed sufficiently before use. An approved exception may permit controlled use where explicitly authorised."
+      }
+    },
+    {
+      "chunkIndex": 12,
+      "blockIndex": 12,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "5. Remediation Requirements"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "5. Remediation Requirements"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 5. Remediation Requirements\n\nFor PASS records, no remediation is required."
+      }
+    },
+    {
+      "chunkIndex": 13,
+      "blockIndex": 13,
+      "blockType": "text",
+      "heading": [
+        "Alternative AI Training Data Privacy Policy",
+        "6. Testing Notes"
+      ],
+      "content": {
+        "heading": [
+          "Alternative AI Training Data Privacy Policy",
+          "6. Testing Notes"
+        ],
+        "text": "Section: Alternative AI Training Data Privacy Policy > 6. Testing Notes\n\nThis document intentionally uses different rule IDs and data types from the original policy. It is designed to test whether the extraction pipeline detects new rules, categories, combinations, decisions and remediation guidance rather than relying on hardcoded rules."
+      }
+    }
+  ]
+}

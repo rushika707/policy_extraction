@@ -1,0 +1,44 @@
+[
+  {
+    "request_id": "REQ-001",
+    "identity_type": "human",
+    "environment": "Development",
+    "privilege": "Developer",
+    "authentication": "MFA",
+    "business_justification": "Model development",
+    "approval": "Team lead",
+    "account_shared": false
+  },
+  {
+    "request_id": "REQ-002",
+    "identity_type": "human",
+    "environment": "Production",
+    "privilege": "Operator",
+    "authentication": "MFA",
+    "business_justification": "Production support",
+    "approval": "Service owner + Security",
+    "account_shared": false
+  },
+  {
+    "request_id": "REQ-003",
+    "identity_type": "human",
+    "environment": "Production",
+    "privilege": "Operator",
+    "authentication": "Phishing-resistant MFA",
+    "business_justification": "Production deployment",
+    "approval": "Service owner + Security",
+    "account_shared": false
+  },
+  {
+    "request_id": "REQ-004",
+    "identity_type": "service_account",
+    "environment": "Development",
+    "privilege": "Developer",
+    "authentication": "MFA",
+    "business_justification": "Automated model training",
+    "approval": "Team lead",
+    "account_shared": false,
+    "owner": "ML Platform",
+    "credential_rotation_days": 120
+  }
+]

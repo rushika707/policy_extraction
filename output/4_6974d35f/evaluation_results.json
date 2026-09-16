@@ -1,0 +1,27 @@
+[
+  {
+    "record_id": "ALT-001",
+    "result": "FLAG",
+    "reason": "The input record contains a username field, which matches the trigger for Rule PII-101 in the policy. Rule PII-101 specifies that the presence of a username triggers the outcome FLAG. No other rules apply to the provided data, and the policy defines FLAG as the outcome for detected personal data. Therefore the record is classified as FLAG."
+  },
+  {
+    "record_id": "ALT-007",
+    "result": "BLOCK",
+    "reason": "The input record contains a field named \"tax_id\". According to the policy’s PII Rules, Rule PII-107 specifies that the presence of a tax identification number (tax_id, taxpayer_number) triggers the outcome BLOCK. No other rules apply to this field, and the policy defines BLOCK as the outcome for this trigger. Therefore the record must be classified as BLOCK."
+  },
+  {
+    "record_id": "ALT-016",
+    "result": "FLAG",
+    "reason": "The input record contains the fields full_name, employer, and job_title. According to the Alternative AI Training Data Privacy Policy, Rule CPII-101 specifies that the combination of Name + employer + job title triggers a FLAG outcome. Since all three required fields are present in the input, the rule applies and the record is classified as FLAG."
+  },
+  {
+    "record_id": "ALT-023",
+    "result": "FLAG",
+    "reason": "The input record contains both a location_history field and a device_id field. According to the policy’s CPII Rules, Rule CPII-108 specifies that the combination of location_history and device_id triggers a FLAG outcome. No other rules apply to this record, and the policy defines FLAG as the outcome for detected personal data requiring remediation."
+  },
+  {
+    "record_id": "ALT-024",
+    "result": "NOT_DETERMINABLE",
+    "reason": "The policy defines outcomes only in the context of detecting PII, SPII, or CPII within a record. The input record provides only metadata (record_id, department, project) and no data fields that could trigger any of the rules listed in the policy. Because the policy does not specify a default outcome for records with no detectable personal data, and the provided context does not contain any rule that applies to the given input, the outcome cannot be determined from the supplied policy context."
+  }
+]

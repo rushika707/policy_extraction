@@ -1,0 +1,39 @@
+[
+  {
+    "record_id": "REC-001",
+    "first_name": "John",
+    "last_name": "Smith",
+    "age": 32,
+    "department": "Engineering"
+  },
+  {
+    "record_id": "REC-002",
+    "email": "john.smith@example.com",
+    "age": 29,
+    "department": "Marketing"
+  },
+  {
+    "record_id": "REC-003",
+    "first_name": "Sarah",
+    "last_name": "Jones",
+    "date_of_birth": "1995-04-12",
+    "postcode": "SW1A 1AA"
+  },
+  {
+    "record_id": "REC-004",
+    "medical_condition": "Asthma",
+    "age": 41,
+    "department": "Finance"
+  },
+  {
+    "record_id": "REC-005",
+    "passport_number": "P12345678",
+    "department": "Operations"
+  },
+  {
+    "record_id": "REC-006",
+    "age": 25,
+    "department": "Engineering",
+    "role": "Developer"
+  }
+]

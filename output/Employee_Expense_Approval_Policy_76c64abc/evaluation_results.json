@@ -1,0 +1,1033 @@
+{
+  "input": [
+    {
+      "expense_id": "EXP-001",
+      "employee_id": "E001",
+      "expense_category": "Travel",
+      "amount": 450,
+      "business_purpose": "Client meeting",
+      "approval": "Line manager"
+    },
+    {
+      "expense_id": "EXP-002",
+      "employee_id": "E002",
+      "expense_category": "Equipment",
+      "amount": 2500,
+      "business_purpose": "Development workstation",
+      "approval": "Line manager"
+    },
+    {
+      "expense_id": "EXP-003",
+      "employee_id": "E003",
+      "expense_category": "Training",
+      "amount": 1500,
+      "business_purpose": "Cloud certification",
+      "approval": "Line manager"
+    },
+    {
+      "expense_id": "EXP-004",
+      "employee_id": "E004",
+      "expense_category": "Travel",
+      "amount": -100,
+      "business_purpose": "Travel correction",
+      "approval": "Line manager"
+    },
+    {
+      "expense_id": "EXP-005",
+      "employee_id": "E005",
+      "expense_category": "Office Supplies",
+      "amount": 200,
+      "business_purpose": "Office materials",
+      "approval": "Line manager"
+    }
+  ],
+  "items": [
+    {
+      "input": {
+        "expense_id": "EXP-001",
+        "employee_id": "E001",
+        "expense_category": "Travel",
+        "amount": 450,
+        "business_purpose": "Client meeting",
+        "approval": "Line manager"
+      },
+      "policy_context": [
+        {
+          "chunk_index": 2,
+          "block_index": 2,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nVersion:",
+          "score": 0.6162726926803589,
+          "semantic_score": 0.4546489417552948,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 3,
+          "block_index": 3,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n1.0",
+          "score": 0.6108162569999694,
+          "semantic_score": 0.4490538239479065,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 5,
+          "block_index": 5,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n15 September 2026",
+          "score": 0.6055096852779388,
+          "semantic_score": 0.4282834231853485,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 16,
+          "block_index": 16,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "6. Decision Outcomes"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\n| Decision   | Meaning                                                                         |\n|------------|---------------------------------------------------------------------------------|\n| APPROVE    | All applicable requirements are satisfied and the required approval is present. |\n| REJECT     | A mandatory requirement is violated or required approval is missing.            |\n| REVIEW     | The policy does not provide enough information for an automatic decision or     |\n| EXCEPTION  | A valid documented exception is active and applicable.                          |",
+          "score": 0.6037513899803161,
+          "semantic_score": 0.4145856499671936,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 1.0
+        },
+        {
+          "chunk_index": 1,
+          "block_index": 1,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nFIN-EXP-2026-004",
+          "score": 0.6006953525543213,
+          "semantic_score": 0.4623280167579651,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 8,
+          "block_index": 8,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "3. Expense Approval Matrix"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 3. Expense Approval Matrix\n\n| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |",
+          "score": 0.508368396361669,
+          "semantic_score": 0.43487226963043213,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 0,
+          "block_index": 0,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nPolicy ID:",
+          "score": 0.3556515916188558,
+          "semantic_score": 0.5833096504211426,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 11,
+          "block_index": 11,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-03 - An expense with a non-positive amount is invalid and must be rejected.",
+          "score": 0.29730777025222777,
+          "semantic_score": 0.07051295042037964,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 9,
+          "block_index": 9,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose.",
+          "score": 0.26623174019157886,
+          "semantic_score": 0.41521596908569336,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 17,
+          "block_index": 17,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "7. Audit Evidence"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 7. Audit Evidence\n\nThe employee identifier, category, amount, business purpose, approval, decision and exception reference where applicable must be retained for audit purposes.",
+          "score": 0.26157489337027073,
+          "semantic_score": 0.010958155617117882,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 10,
+          "block_index": 10,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-02 - An expense must have the approval required by the Expense Approval Matrix before reimbursement.",
+          "score": 0.24709637761116027,
+          "semantic_score": 0.41182729601860046,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 6,
+          "block_index": 6,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "1. Purpose"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 1. Purpose\n\nThis policy establishes requirements for reviewing and approving employee expenses. Expenses must be supported by a valid business purpose and the required approval before reimbursement.",
+          "score": 0.14254265427589416,
+          "semantic_score": 0.2375710904598236,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 7,
+          "block_index": 7,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "2. Scope"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 2. Scope\n\nThis policy applies to employees, contractors and temporary staff submitting business-related expenses.",
+          "score": 0.1156693696975708,
+          "semantic_score": 0.19278228282928467,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        }
+      ],
+      "evaluation": {
+        "result": "APPROVE",
+        "reasoning": "The expense is for the Travel category with an amount of £450, which falls within the \"Up to £500\" threshold in the Expense Approval Matrix. The required approval for this threshold is a Line manager, and the input indicates approval by a Line manager. All mandatory requirements (ER-01, ER-02, ER-03) are satisfied: the expense contains all required fields, has a positive amount, and has the necessary approval. Therefore, per the policy’s decision outcomes, the expense is APPROVED.",
+        "evidence": [
+          {
+            "policy_section": "3. Expense Approval Matrix",
+            "policy_text": "| Travel | Up to £500 | Line manager | REJECT |"
+          },
+          {
+            "policy_section": "4. Mandatory Requirements",
+            "policy_text": "ER-02 - An expense must have the approval required by the Expense Approval Matrix before reimbursement."
+          },
+          {
+            "policy_section": "4. Mandatory Requirements",
+            "policy_text": "ER-03 - An expense with a non-positive amount is invalid and must be rejected."
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "expense_id": "EXP-002",
+        "employee_id": "E002",
+        "expense_category": "Equipment",
+        "amount": 2500,
+        "business_purpose": "Development workstation",
+        "approval": "Line manager"
+      },
+      "policy_context": [
+        {
+          "chunk_index": 2,
+          "block_index": 2,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nVersion:",
+          "score": 0.6162726926803589,
+          "semantic_score": 0.4546489417552948,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 3,
+          "block_index": 3,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n1.0",
+          "score": 0.6108162569999694,
+          "semantic_score": 0.4490538239479065,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 5,
+          "block_index": 5,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n15 September 2026",
+          "score": 0.6055096852779388,
+          "semantic_score": 0.4282834231853485,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 16,
+          "block_index": 16,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "6. Decision Outcomes"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\n| Decision   | Meaning                                                                         |\n|------------|---------------------------------------------------------------------------------|\n| APPROVE    | All applicable requirements are satisfied and the required approval is present. |\n| REJECT     | A mandatory requirement is violated or required approval is missing.            |\n| REVIEW     | The policy does not provide enough information for an automatic decision or     |\n| EXCEPTION  | A valid documented exception is active and applicable.                          |",
+          "score": 0.6037513899803161,
+          "semantic_score": 0.4145856499671936,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 1.0
+        },
+        {
+          "chunk_index": 1,
+          "block_index": 1,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nFIN-EXP-2026-004",
+          "score": 0.6006953525543213,
+          "semantic_score": 0.4623280167579651,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 8,
+          "block_index": 8,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "3. Expense Approval Matrix"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 3. Expense Approval Matrix\n\n| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |",
+          "score": 0.508368396361669,
+          "semantic_score": 0.43487226963043213,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 0,
+          "block_index": 0,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nPolicy ID:",
+          "score": 0.3556515916188558,
+          "semantic_score": 0.5833096504211426,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 11,
+          "block_index": 11,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-03 - An expense with a non-positive amount is invalid and must be rejected.",
+          "score": 0.29730777025222777,
+          "semantic_score": 0.07051295042037964,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 9,
+          "block_index": 9,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose.",
+          "score": 0.26623174019157886,
+          "semantic_score": 0.018719566985964775,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 17,
+          "block_index": 17,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "7. Audit Evidence"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 7. Audit Evidence\n\nThe employee identifier, category, amount, business purpose, approval, decision and exception reference where applicable must be retained for audit purposes.",
+          "score": 0.26157489337027073,
+          "semantic_score": 0.010958155617117882,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 10,
+          "block_index": 10,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-02 - An expense must have the approval required by the Expense Approval Matrix before reimbursement.",
+          "score": 0.23352629542350767,
+          "semantic_score": 0.3892104923725128,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 6,
+          "block_index": 6,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "1. Purpose"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 1. Purpose\n\nThis policy establishes requirements for reviewing and approving employee expenses. Expenses must be supported by a valid business purpose and the required approval before reimbursement.",
+          "score": 0.14254265427589416,
+          "semantic_score": 0.2375710904598236,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 7,
+          "block_index": 7,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "2. Scope"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 2. Scope\n\nThis policy applies to employees, contractors and temporary staff submitting business-related expenses.",
+          "score": 0.13477524518966674,
+          "semantic_score": 0.19278228282928467,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 13,
+          "block_index": 13,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-05 - An expense must not be reimbursed when the required approval is missing.",
+          "score": 0.10429611504077911,
+          "semantic_score": 0.17382685840129852,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        }
+      ],
+      "evaluation": {
+        "result": "REJECT",
+        "reasoning": "The expense is for the category \"Equipment\" with an amount of 2500, which exceeds the £1,000 threshold in the Expense Approval Matrix. The matrix specifies that for Equipment above £1,000 the required approval is the Department head. The input provides only Line manager approval, which does not satisfy the required approval. This violates mandatory requirement ER-02 (and implicitly ER-05). According to the Decision Outcomes table, a violation of a mandatory requirement results in a REJECT outcome.",
+        "evidence": [
+          {
+            "policy_section": "3. Expense Approval Matrix",
+            "policy_text": "| Equipment | Above £1,000 | Department head | REJECT |"
+          },
+          {
+            "policy_section": "4. Mandatory Requirements",
+            "policy_text": "ER-02 - An expense must have the approval required by the Expense Approval Matrix before reimbursement."
+          },
+          {
+            "policy_section": "4. Mandatory Requirements",
+            "policy_text": "ER-05 - An expense must not be reimbursed when the required approval is missing."
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "expense_id": "EXP-003",
+        "employee_id": "E003",
+        "expense_category": "Training",
+        "amount": 1500,
+        "business_purpose": "Cloud certification",
+        "approval": "Line manager"
+      },
+      "policy_context": [
+        {
+          "chunk_index": 2,
+          "block_index": 2,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nVersion:",
+          "score": 0.6162726926803589,
+          "semantic_score": 0.4546489417552948,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 3,
+          "block_index": 3,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n1.0",
+          "score": 0.6108162569999694,
+          "semantic_score": 0.4490538239479065,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 5,
+          "block_index": 5,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n15 September 2026",
+          "score": 0.6055096852779388,
+          "semantic_score": 0.4282834231853485,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 16,
+          "block_index": 16,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "6. Decision Outcomes"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\n| Decision   | Meaning                                                                         |\n|------------|---------------------------------------------------------------------------------|\n| APPROVE    | All applicable requirements are satisfied and the required approval is present. |\n| REJECT     | A mandatory requirement is violated or required approval is missing.            |\n| REVIEW     | The policy does not provide enough information for an automatic decision or     |\n| EXCEPTION  | A valid documented exception is active and applicable.                          |",
+          "score": 0.6037513899803161,
+          "semantic_score": 0.4145856499671936,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 1.0
+        },
+        {
+          "chunk_index": 1,
+          "block_index": 1,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nFIN-EXP-2026-004",
+          "score": 0.6006953525543213,
+          "semantic_score": 0.4623280167579651,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 8,
+          "block_index": 8,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "3. Expense Approval Matrix"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 3. Expense Approval Matrix\n\n| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |",
+          "score": 0.508368396361669,
+          "semantic_score": 0.43487226963043213,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 0,
+          "block_index": 0,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nPolicy ID:",
+          "score": 0.3556515916188558,
+          "semantic_score": 0.5833096504211426,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 11,
+          "block_index": 11,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-03 - An expense with a non-positive amount is invalid and must be rejected.",
+          "score": 0.29730777025222777,
+          "semantic_score": 0.405568391084671,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 9,
+          "block_index": 9,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose.",
+          "score": 0.26623174019157886,
+          "semantic_score": 0.018719566985964775,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 17,
+          "block_index": 17,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "7. Audit Evidence"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 7. Audit Evidence\n\nThe employee identifier, category, amount, business purpose, approval, decision and exception reference where applicable must be retained for audit purposes.",
+          "score": 0.26157489337027073,
+          "semantic_score": 0.010958155617117882,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 6,
+          "block_index": 6,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "1. Purpose"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 1. Purpose\n\nThis policy establishes requirements for reviewing and approving employee expenses. Expenses must be supported by a valid business purpose and the required approval before reimbursement.",
+          "score": 0.14254265427589416,
+          "semantic_score": 0.2375710904598236,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 7,
+          "block_index": 7,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "2. Scope"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 2. Scope\n\nThis policy applies to employees, contractors and temporary staff submitting business-related expenses.",
+          "score": 0.11670097410678863,
+          "semantic_score": 0.19278228282928467,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        }
+      ],
+      "evaluation": {
+        "result": "APPROVE",
+        "reasoning": "The expense meets all mandatory requirements: it has a positive amount, includes all required fields, and the required approval (Line manager) is present. The amount (1500) is within the Training category limit of up to £2,000, so the matrix requires Line manager approval, which is satisfied. No violations or exceptions apply.",
+        "evidence": [
+          {
+            "policy_section": "4. Mandatory Requirements",
+            "policy_text": "ER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose.\nER-03 - An expense with a non-positive amount is invalid and must be rejected."
+          },
+          {
+            "policy_section": "3. Expense Approval Matrix",
+            "policy_text": "| Training | Up to £2,000 | Line manager | REJECT |"
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "expense_id": "EXP-004",
+        "employee_id": "E004",
+        "expense_category": "Travel",
+        "amount": -100,
+        "business_purpose": "Travel correction",
+        "approval": "Line manager"
+      },
+      "policy_context": [
+        {
+          "chunk_index": 2,
+          "block_index": 2,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nVersion:",
+          "score": 0.6162726926803589,
+          "semantic_score": 0.4546489417552948,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 3,
+          "block_index": 3,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n1.0",
+          "score": 0.6108162569999694,
+          "semantic_score": 0.4490538239479065,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 5,
+          "block_index": 5,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n15 September 2026",
+          "score": 0.6055096852779388,
+          "semantic_score": 0.4282834231853485,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 16,
+          "block_index": 16,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "6. Decision Outcomes"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\n| Decision   | Meaning                                                                         |\n|------------|---------------------------------------------------------------------------------|\n| APPROVE    | All applicable requirements are satisfied and the required approval is present. |\n| REJECT     | A mandatory requirement is violated or required approval is missing.            |\n| REVIEW     | The policy does not provide enough information for an automatic decision or     |\n| EXCEPTION  | A valid documented exception is active and applicable.                          |",
+          "score": 0.6037513899803161,
+          "semantic_score": 0.2528385519981384,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 1,
+          "block_index": 1,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nFIN-EXP-2026-004",
+          "score": 0.6006953525543213,
+          "semantic_score": 0.4623280167579651,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 8,
+          "block_index": 8,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "3. Expense Approval Matrix"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 3. Expense Approval Matrix\n\n| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |",
+          "score": 0.508368396361669,
+          "semantic_score": 0.43487226963043213,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 0,
+          "block_index": 0,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nPolicy ID:",
+          "score": 0.3556515916188558,
+          "semantic_score": 0.5833096504211426,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 11,
+          "block_index": 11,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-03 - An expense with a non-positive amount is invalid and must be rejected.",
+          "score": 0.29730777025222777,
+          "semantic_score": 0.3847685754299164,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 9,
+          "block_index": 9,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose.",
+          "score": 0.26623174019157886,
+          "semantic_score": 0.38668709993362427,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 17,
+          "block_index": 17,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "7. Audit Evidence"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 7. Audit Evidence\n\nThe employee identifier, category, amount, business purpose, approval, decision and exception reference where applicable must be retained for audit purposes.",
+          "score": 0.26157489337027073,
+          "semantic_score": 0.010958155617117882,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 6,
+          "block_index": 6,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "1. Purpose"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 1. Purpose\n\nThis policy establishes requirements for reviewing and approving employee expenses. Expenses must be supported by a valid business purpose and the required approval before reimbursement.",
+          "score": 0.14254265427589416,
+          "semantic_score": 0.2375710904598236,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 7,
+          "block_index": 7,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "2. Scope"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 2. Scope\n\nThis policy applies to employees, contractors and temporary staff submitting business-related expenses.",
+          "score": 0.13358466625213622,
+          "semantic_score": 0.19278228282928467,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        }
+      ],
+      "evaluation": {
+        "result": "REJECT",
+        "reasoning": "The expense has a non‑positive amount of –£100, which violates mandatory requirement ER‑03: “An expense with a non‑positive amount is invalid and must be rejected.” The policy defines REJECT as the outcome when a mandatory requirement is violated. Therefore the correct outcome is REJECT.",
+        "evidence": [
+          {
+            "policy_section": "4. Mandatory Requirements",
+            "policy_text": "ER-03 - An expense with a non-positive amount is invalid and must be rejected."
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "expense_id": "EXP-005",
+        "employee_id": "E005",
+        "expense_category": "Office Supplies",
+        "amount": 200,
+        "business_purpose": "Office materials",
+        "approval": "Line manager"
+      },
+      "policy_context": [
+        {
+          "chunk_index": 2,
+          "block_index": 2,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nVersion:",
+          "score": 0.6162726926803589,
+          "semantic_score": 0.4546489417552948,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 3,
+          "block_index": 3,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n1.0",
+          "score": 0.6108162569999694,
+          "semantic_score": 0.4490538239479065,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 5,
+          "block_index": 5,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\n15 September 2026",
+          "score": 0.6055096852779388,
+          "semantic_score": 0.4282834231853485,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 16,
+          "block_index": 16,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "6. Decision Outcomes"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 6. Decision Outcomes\n\n| Decision   | Meaning                                                                         |\n|------------|---------------------------------------------------------------------------------|\n| APPROVE    | All applicable requirements are satisfied and the required approval is present. |\n| REJECT     | A mandatory requirement is violated or required approval is missing.            |\n| REVIEW     | The policy does not provide enough information for an automatic decision or     |\n| EXCEPTION  | A valid documented exception is active and applicable.                          |",
+          "score": 0.6037513899803161,
+          "semantic_score": 0.4145856499671936,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 1.0
+        },
+        {
+          "chunk_index": 1,
+          "block_index": 1,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nFIN-EXP-2026-004",
+          "score": 0.6006953525543213,
+          "semantic_score": 0.4623280167579651,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 8,
+          "block_index": 8,
+          "block_type": "table",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "3. Expense Approval Matrix"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 3. Expense Approval Matrix\n\n| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |",
+          "score": 0.508368396361669,
+          "semantic_score": 0.43487226963043213,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 0,
+          "block_index": 0,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy"
+          ],
+          "text": "Section: Employee Expense Approval Policy\n\nPolicy ID:",
+          "score": 0.3556515916188558,
+          "semantic_score": 0.5833096504211426,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 11,
+          "block_index": 11,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-03 - An expense with a non-positive amount is invalid and must be rejected.",
+          "score": 0.29730777025222777,
+          "semantic_score": 0.07051295042037964,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 9,
+          "block_index": 9,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "4. Mandatory Requirements"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 4. Mandatory Requirements\n\nER-01 - Every expense must contain an employee identifier, expense category, amount and business purpose.",
+          "score": 0.26623174019157886,
+          "semantic_score": 0.018719566985964775,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 17,
+          "block_index": 17,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "7. Audit Evidence"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 7. Audit Evidence\n\nThe employee identifier, category, amount, business purpose, approval, decision and exception reference where applicable must be retained for audit purposes.",
+          "score": 0.26157489337027073,
+          "semantic_score": 0.010958155617117882,
+          "lexical_score": 0.8500000000000001,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 6,
+          "block_index": 6,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "1. Purpose"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 1. Purpose\n\nThis policy establishes requirements for reviewing and approving employee expenses. Expenses must be supported by a valid business purpose and the required approval before reimbursement.",
+          "score": 0.1694847285747528,
+          "semantic_score": 0.2375710904598236,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        },
+        {
+          "chunk_index": 7,
+          "block_index": 7,
+          "block_type": "text",
+          "heading": [
+            "Employee Expense Approval Policy",
+            "2. Scope"
+          ],
+          "text": "Section: Employee Expense Approval Policy > 2. Scope\n\nThis policy applies to employees, contractors and temporary staff submitting business-related expenses.",
+          "score": 0.1156693696975708,
+          "semantic_score": 0.19278228282928467,
+          "lexical_score": 0.0,
+          "heading_score": 0.0
+        }
+      ],
+      "evaluation": {
+        "result": "REVIEW",
+        "reasoning": "The input expense satisfies all mandatory requirements: ER-01 (all required fields are present) and ER-03 (amount is positive). The expense category \"Office Supplies\" is not listed in the Expense Approval Matrix, so no specific approval requirement or outcome is defined for this category. Because the policy does not provide an automatic decision for this case, the appropriate outcome per the policy’s Decision Outcomes table is REVIEW.",
+        "evidence": [
+          {
+            "policy_section": "3. Expense Approval Matrix",
+            "policy_text": "| Expense category   | Amount       | Required approval   | Outcome if approval missing   |\n|--------------------|--------------|---------------------|-------------------------------|\n| Travel             | Up to £500   | Line manager        | REJECT                        |\n| Travel             | Above £500   | Department head     | REJECT                        |\n| Equipment          | Up to £1,000 | Line manager        | REJECT                        |\n| Equipment          | Above £1,000 | Department head     | REJECT                        |\n| Training           | Up to £2,000 | Line manager        | REJECT                        |\n| Training           | Above £2,000 | Department head     | REJECT                        |"
+          }
+        ]
+      }
+    }
+  ]
+}

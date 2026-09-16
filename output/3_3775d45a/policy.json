@@ -1,0 +1,152 @@
+{
+  "documentFragments": [
+    {
+      "chunkIndex": 0,
+      "blockIndex": 0,
+      "blockType": "text",
+      "heading": [
+        "Conditional Policy Rules - Variant 03"
+      ],
+      "content": {
+        "heading": [
+          "Conditional Policy Rules - Variant 03"
+        ],
+        "text": "Section: Conditional Policy Rules - Variant 03\n\nRules are expressed as conditions. Evaluate all applicable conditions; BLOCK has higher priority than FLAG, and FLAG has higher priority than PASS."
+      }
+    },
+    {
+      "chunkIndex": 1,
+      "blockIndex": 1,
+      "blockType": "text",
+      "heading": [
+        "Conditional Policy Rules - Variant 03",
+        "Conditional rules:"
+      ],
+      "content": {
+        "heading": [
+          "Conditional Policy Rules - Variant 03",
+          "Conditional rules:"
+        ],
+        "rules": [
+          {
+            "number": 1,
+            "condition": "PII contains a full name",
+            "action": "BLOCK"
+          },
+          {
+            "number": 2,
+            "condition": "PII contains a personal email",
+            "action": "FLAG"
+          },
+          {
+            "number": 3,
+            "condition": "PII contains a personal phone number",
+            "action": "BLOCK"
+          },
+          {
+            "number": 4,
+            "condition": "PII contains a home/residential address",
+            "action": "FLAG"
+          },
+          {
+            "number": 5,
+            "condition": "PII contains a passport number",
+            "action": "BLOCK"
+          },
+          {
+            "number": 6,
+            "condition": "PII contains a driving licence number",
+            "action": "FLAG"
+          },
+          {
+            "number": 7,
+            "condition": "PII contains a bank account or payment card number",
+            "action": "BLOCK"
+          },
+          {
+            "number": 8,
+            "condition": "PII contains an IP address that is attributable to an individual",
+            "action": "FLAG"
+          },
+          {
+            "number": 9,
+            "condition": "SPII contains medical diagnosis, treatment or disability information",
+            "action": "BLOCK"
+          },
+          {
+            "number": 10,
+            "condition": "SPII contains ethnicity or racial origin",
+            "action": "FLAG"
+          },
+          {
+            "number": 11,
+            "condition": "SPII contains religion or belief",
+            "action": "BLOCK"
+          },
+          {
+            "number": 12,
+            "condition": "SPII contains political opinion",
+            "action": "FLAG"
+          },
+          {
+            "number": 13,
+            "condition": "SPII contains biometric or genetic information",
+            "action": "BLOCK"
+          },
+          {
+            "number": 14,
+            "condition": "CPII contains full name AND date of birth",
+            "action": "FLAG"
+          },
+          {
+            "number": 15,
+            "condition": "CPII contains full name AND personal email",
+            "action": "BLOCK"
+          },
+          {
+            "number": 16,
+            "condition": "CPII contains full name AND phone number",
+            "action": "FLAG"
+          },
+          {
+            "number": 17,
+            "condition": "CPII contains date of birth AND postcode AND gender",
+            "action": "BLOCK"
+          },
+          {
+            "number": 18,
+            "condition": "CPII contains employee ID AND department AND role and the employee is re-identifiable",
+            "action": "FLAG"
+          },
+          {
+            "number": 19,
+            "condition": "no condition is satisfied",
+            "action": "PASS"
+          }
+        ]
+      }
+    },
+    {
+      "chunkIndex": 2,
+      "blockIndex": 2,
+      "blockType": "text",
+      "heading": [
+        "Conditional Policy Rules - Variant 03",
+        "Conditional rules:"
+      ],
+      "content": {
+        "heading": [
+          "Conditional Policy Rules - Variant 03",
+          "Conditional rules:"
+        ],
+        "rules": [
+          {
+            "number": 20,
+            "condition": "a valid documented exception covers a BLOCK finding",
+            "action": "EXCEPTION APPROVED"
+          }
+        ]
+      }
+    }
+  ]
+}

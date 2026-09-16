@@ -1,0 +1,24 @@
+{
+  "valid": true,
+  "issues": [],
+  "warnings": [
+    "Extracted JSON has relatively low textual coverage of the source document."
+  ],
+  "statistics": {
+    "source_characters": 1478,
+    "source_headings": 2,
+    "source_tables": 0,
+    "json_characters": 2771,
+    "objects": 27,
+    "arrays": 9,
+    "strings": 136,
+    "numbers": 26,
+    "booleans": 0,
+    "nulls": 0,
+    "keys": 82,
+    "unmatched_headings": [],
+    "text_coverage": 0.681,
+    "json_to_source_ratio": 1.875,
+    "source_tail_coverage": 0.681
+  }
+}

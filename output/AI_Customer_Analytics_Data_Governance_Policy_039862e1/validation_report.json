@@ -1,0 +1,27 @@
+{
+  "valid": true,
+  "issues": [],
+  "warnings": [
+    "Some source headings were not found literally in the extracted JSON."
+  ],
+  "statistics": {
+    "source_characters": 13947,
+    "source_headings": 18,
+    "source_tables": 10,
+    "json_characters": 18362,
+    "objects": 103,
+    "arrays": 55,
+    "strings": 621,
+    "numbers": 44,
+    "booleans": 0,
+    "nulls": 0,
+    "keys": 329,
+    "unmatched_headings": [
+      "5. Customer Data Classification Catalogue"
+    ],
+    "heading_coverage": 0.944,
+    "text_coverage": 0.998,
+    "json_to_source_ratio": 1.317,
+    "source_tail_coverage": 1.0
+  }
+}

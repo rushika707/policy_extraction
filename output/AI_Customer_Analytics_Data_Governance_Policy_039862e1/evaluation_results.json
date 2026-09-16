@@ -1,0 +1,64 @@
+{
+  "overall_result": "Cannot determine collection-level outcome from policy",
+  "summary": "Each record was evaluated against the policy rules for direct identifiers, restricted data, and indirect identifiers. Outcomes were assigned based on the first matching rule for each record. No collection-level aggregation rule is defined in the policy, so an overall outcome cannot be derived.",
+  "items": [
+    {
+      "input": {
+        "record_id": "REC-001",
+        "customer_name": "John Smith",
+        "age": 32,
+        "department": "Engineering"
+      },
+      "result": "Flag record",
+      "reasoning": "The record contains a customer name, which matches Rule CID-01 in the policy for direct customer identifiers. The required outcome for this rule is to flag the record.",
+      "evidence": [
+        {
+          "policy_section": "5.1 Direct customer identifiers",
+          "policy_text": "| CID-01 | Customer name | first_name, last_name, full_name, customer_name | Flag record |"
+        }
+      ]
+    },
+    {
+      "input": {
+        "record_id": "REC-002",
+        "medical_support": "Asthma treatment",
+        "age": 41,
+        "department": "Finance"
+      },
+      "result": "Block record",
+      "reasoning": "The record contains medical_support, which matches Rule RC-02 in the policy for restricted customer data. The required outcome for this rule is to block the record.",
+      "evidence": [
+        {
+          "policy_section": "5.2 Restricted customer data",
+          "policy_text": "| RC-02 | Health-related customer information | medical_support, health_condition, disability_information | Block record |"
+        }
+      ]
+    },
+    {
+      "input": {
+        "record_id": "REC-003",
+        "national_id": "UK123456789",
+        "department": "Operations"
+      },
+      "result": "Block until removed or approved",
+      "reasoning": "The record contains a national_id, which matches Rule CID-05 in the policy for direct customer identifiers. The required outcome for this rule is to block until removed or approved.",
+      "evidence": [
+        {
+          "policy_section": "5.1 Direct customer identifiers",
+          "policy_text": "| CID-05 | Government-issued identifier | national_id, tax_id, licence_number | Block until removed or approved |"
+        }
+      ]
+    },
+    {
+      "input": {
+        "record_id": "REC-004",
+        "age": 25,
+        "department": "Engineering",
+        "role": "Developer"
+      },
+      "result": "No applicable rule",
+      "reasoning": "The record does not contain any data types that match the policy rules for direct identifiers, restricted data, or indirect identifiers. Therefore, no policy outcome applies.",
+      "evidence": []
+    }
+  ]
+}

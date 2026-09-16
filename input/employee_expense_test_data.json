@@ -1,0 +1,42 @@
+[
+  {
+    "expense_id": "EXP-001",
+    "employee_id": "E001",
+    "expense_category": "Travel",
+    "amount": 450,
+    "business_purpose": "Client meeting",
+    "approval": "Line manager"
+  },
+  {
+    "expense_id": "EXP-002",
+    "employee_id": "E002",
+    "expense_category": "Equipment",
+    "amount": 2500,
+    "business_purpose": "Development workstation",
+    "approval": "Line manager"
+  },
+  {
+    "expense_id": "EXP-003",
+    "employee_id": "E003",
+    "expense_category": "Training",
+    "amount": 1500,
+    "business_purpose": "Cloud certification",
+    "approval": "Line manager"
+  },
+  {
+    "expense_id": "EXP-004",
+    "employee_id": "E004",
+    "expense_category": "Travel",
+    "amount": -100,
+    "business_purpose": "Travel correction",
+    "approval": "Line manager"
+  },
+  {
+    "expense_id": "EXP-005",
+    "employee_id": "E005",
+    "expense_category": "Office Supplies",
+    "amount": 200,
+    "business_purpose": "Office materials",
+    "approval": "Line manager"
+  }
+]
